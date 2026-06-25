@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Setup Admin User</title>
+</head>
+<body>
+  <h2>Setting up Superadmin...</h2>
+  <div id="log"></div>
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+    import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+    import { getFirestore, doc, setDoc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyDPz8rchqOD7mHbrLtnuU5m9uAMEJgf59U",
+      authDomain: "decor-25587.firebaseapp.com",
+      projectId: "decor-25587",
+      storageBucket: "decor-25587.firebasestorage.app",
+      messagingSenderId: "857089585477",
+      appId: "1:857089585477:web:14348a7e77b6b4931f8e2c"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    const db = getFirestore(app);
+
+    const log = (msg) => document.getElementById('log').innerHTML += `<p>${msg}</p>`;
+
+    async function setup() {
+      try {
+        log("Creating user admin@shreeballoons.in...");
+        const userCredential = await createUserWithEmailAndPassword(auth, "admin@shreeballoons.in", "Admin@123");
+        log("User created! UID: " + userCredential.user.uid);
+        
+        log("Setting Superadmin permissions in Firestore...");
+        await setDoc(doc(db, "users", userCredential.user.uid), {
+          email: "admin@shreeballoons.in",
+          role: "superadmin",
+          createdAt: Date.now()
+        });
+        
+        log("✅ SUCCESS! You can now log in.");
+        log("Email: <b>admin@shreeballoons.in</b>");
+        log("Password: <b>Admin@123</b>");
+      } catch(e) {
+        if(e.code === 'auth/email-already-in-use') {
+          log("✅ User already exists. You can log in with: admin@shreeballoons.in");
+        } else {
+          log("❌ Error: " + e.message);
+          if(e.code === 'auth/admin-restricted-operation' || e.message.includes('auth/operation-not-allowed')) {
+             log("⚠️ Note: You need to enable 'Email/Password' authentication in your Firebase Console first!");
+          }
+        }
+      }
+    }
+    
+    setup();
+  </script>
+</body>
+</html>

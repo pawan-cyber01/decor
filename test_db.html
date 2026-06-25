@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head><title>Test DB</title></head>
+<body>
+  <h1>Test DB</h1>
+  <div id="out"></div>
+  <script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+  import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+  const app = initializeApp({
+    apiKey: "AIzaSyDPz8rchqOD7mHbrLtnuU5m9uAMEJgf59U",
+    authDomain: "decor-25587.firebaseapp.com",
+    projectId: "decor-25587"
+  });
+  const db = getFirestore(app);
+  getDocs(collection(db, "services")).then(snap => {
+    document.getElementById('out').innerHTML += '<p>Services: ' + snap.size + '</p>';
+  }).catch(e => {
+    document.getElementById('out').innerHTML += '<p>Services Error: ' + e.message + '</p>';
+  });
+  getDocs(collection(db, "gallery")).then(snap => {
+    document.getElementById('out').innerHTML += '<p>Gallery: ' + snap.size + '</p>';
+  }).catch(e => {
+    document.getElementById('out').innerHTML += '<p>Gallery Error: ' + e.message + '</p>';
+  });
+  </script>
+</body>
+</html>

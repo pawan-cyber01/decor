@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us | Shree Balloons — Our Story</title>
+<meta name="description" content="Learn about Shree Balloons — Delhi NCR's most trusted balloon decoration company. 5+ years, 5000+ events, 4.9★ Google rating. Serving birthdays, weddings, and more since 2019.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+<style>
+:root{--sky:#009dff;--sky-l:#5dc7ff;--sky-bg:#eaf8ff;--dark:#0a0f1a;--mid:#1e2d3d;--muted:#64748b;--glass-b:rgba(255,255,255,.75);--h:'Playfair Display',Georgia,serif;--b:'Inter',system-ui,sans-serif;--radius:24px}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--b);background:var(--sky-bg);color:var(--dark);overflow-x:hidden;cursor:none}
+body::before{content:'';position:fixed;inset:0;background:linear-gradient(135deg,#5dc7ff 0%,#b9ecff 35%,#eaf8ff 65%,#f0faff 100%);background-size:300% 300%;animation:bgM 22s ease infinite;z-index:-10}
+@keyframes bgM{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+.cursor{position:fixed;width:10px;height:10px;background:var(--sky);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);mix-blend-mode:multiply}
+.cursor-ring{position:fixed;width:36px;height:36px;border:2px solid var(--sky);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:left .12s ease,top .12s ease;opacity:.5}
+.scroll-bar{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--sky-l),var(--sky),#0066cc);z-index:10000;width:0%;box-shadow:0 0 8px var(--sky)}
+.navbar{position:fixed;top:18px;left:50%;transform:translateX(-50%);width:min(96%,1150px);display:flex;justify-content:space-between;align-items:center;padding:14px 32px;background:rgba(255,255,255,.2);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.4);border-radius:80px;z-index:1000;transition:all .45s;box-shadow:0 8px 32px rgba(0,0,0,.07)}
+.navbar.sc{background:rgba(255,255,255,.8);box-shadow:0 10px 40px rgba(0,157,255,.18)}
+.nav-logo{font-family:var(--h);font-size:1.35rem;font-weight:900;color:var(--dark);text-decoration:none;display:flex;align-items:center;gap:8px}
+.nav-logo em{font-style:normal;color:var(--sky)}
+.nav-links{display:flex;list-style:none;gap:28px;align-items:center}
+.nav-links a{text-decoration:none;color:var(--mid);font-weight:500;font-size:.88rem;transition:color .3s;position:relative}
+.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:var(--sky);transition:width .3s;border-radius:2px}
+.nav-links a:hover::after,.nav-links a.active::after{width:100%}
+.nav-links a:hover,.nav-links a.active{color:var(--sky)}
+.nav-cta{background:linear-gradient(135deg,#009dff,#67dfff);color:#fff !important;padding:11px 26px;border-radius:50px;font-weight:700;box-shadow:0 8px 22px rgba(0,157,255,.35);transition:all .3s !important}
+.nav-cta:hover{transform:translateY(-3px) !important}.nav-cta::after{display:none !important}
+.mobile-nav{display:none;position:fixed;bottom:16px;left:50%;transform:translateX(-50%);background:rgba(255,255,255,.72);backdrop-filter:blur(30px);border:1px solid rgba(255,255,255,.6);border-radius:80px;padding:12px 28px;z-index:1000;box-shadow:0 10px 40px rgba(0,0,0,.12)}
+.mobile-nav ul{display:flex;list-style:none;gap:26px;align-items:center}
+.mobile-nav a{text-decoration:none;color:var(--mid);font-size:.72rem;font-weight:600;display:flex;flex-direction:column;align-items:center;gap:3px;transition:color .3s}
+.mobile-nav a .ico{font-size:1.25rem}
+.mobile-nav a:hover,.mobile-nav a.active{color:var(--sky)}
+.ctn{max-width:1200px;margin:0 auto}
+.s-tag{display:inline-block;background:linear-gradient(135deg,rgba(0,157,255,.1),rgba(103,223,255,.1));border:1px solid rgba(0,157,255,.22);color:var(--sky);padding:7px 18px;border-radius:50px;font-size:.75rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:16px}
+.s-title{font-family:var(--h);font-size:clamp(1.9rem,5vw,3rem);font-weight:900;color:var(--dark);line-height:1.2;margin-bottom:14px}
+.s-sub{font-size:1rem;color:var(--muted);line-height:1.8;max-width:580px}
+section{padding:100px 20px;position:relative;z-index:10}
+/* HERO */
+.page-hero{padding:160px 20px 80px;text-align:center;position:relative;z-index:10}
+.page-hero h1{font-family:var(--h);font-size:clamp(2.5rem,6vw,4rem);font-weight:900;color:var(--dark);margin-bottom:14px}
+.page-hero p{font-size:1.05rem;color:var(--muted);max-width:560px;margin:0 auto;line-height:1.8}
+/* STORY */
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.story-img{position:relative}
+.story-img img{width:100%;border-radius:var(--radius);object-fit:cover;height:520px;box-shadow:0 30px 70px rgba(0,0,0,.1)}
+.badge-fl{position:absolute;bottom:-18px;right:-18px;background:linear-gradient(135deg,#009dff,#67dfff);color:#fff;padding:18px 24px;border-radius:18px;box-shadow:0 20px 50px rgba(0,157,255,.4);text-align:center;font-weight:700}
+.badge-fl .num{font-size:2.2rem;font-family:var(--h);display:block;line-height:1}
+/* STATS */
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:40px}
+.stat-card{background:rgba(255,255,255,.65);backdrop-filter:blur(14px);border:1px solid var(--glass-b);border-radius:18px;padding:24px;text-align:center;transition:all .4s}
+.stat-card:hover{transform:translateY(-6px);box-shadow:0 20px 50px rgba(0,157,255,.15)}
+.stat-card .num{font-family:var(--h);font-size:2.2rem;font-weight:900;color:var(--sky)}
+.stat-card p{font-size:.85rem;color:var(--muted);margin-top:5px;font-weight:600}
+/* TIMELINE */
+.tl-sec{padding:80px 20px;position:relative;z-index:10}
+.tl-title{text-align:center;margin-bottom:60px}
+.tl{max-width:800px;margin:0 auto;position:relative}
+.tl::before{content:'';position:absolute;left:50%;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,var(--sky),transparent);transform:translateX(-50%)}
+.tl-it{display:flex;gap:30px;margin-bottom:50px;align-items:center}
+.tl-it:nth-child(even){flex-direction:row-reverse}
+.tl-it:nth-child(even) .tl-c{text-align:right}
+.tl-dot{width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,#009dff,#67dfff);display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0;box-shadow:0 6px 20px rgba(0,157,255,.35);z-index:2}
+.tl-c{flex:1;background:rgba(255,255,255,.7);backdrop-filter:blur(14px);border:1px solid var(--glass-b);border-radius:18px;padding:22px 26px;box-shadow:0 10px 30px rgba(0,0,0,.06)}
+.tl-c h3{font-family:var(--h);font-size:1.1rem;color:var(--dark);margin-bottom:6px}
+.tl-c p{font-size:.88rem;color:var(--muted);line-height:1.65}
+/* VALUES */
+.values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:50px}
+.val-card{background:rgba(255,255,255,.65);backdrop-filter:blur(14px);border:1px solid var(--glass-b);border-radius:var(--radius);padding:32px;text-align:center;box-shadow:0 15px 40px rgba(0,0,0,.06);transition:all .4s}
+.val-card:hover{transform:translateY(-8px);box-shadow:0 30px 65px rgba(0,157,255,.15)}
+.val-ico{font-size:2.5rem;margin-bottom:16px;display:block}
+.val-card h3{font-family:var(--h);font-size:1.15rem;color:var(--dark);margin-bottom:10px}
+.val-card p{font-size:.88rem;color:var(--muted);line-height:1.7}
+/* CTA */
+.cta-sec{padding:80px 20px;text-align:center;position:relative;z-index:10}
+.cta-card{max-width:700px;margin:0 auto;background:linear-gradient(135deg,rgba(0,157,255,.12),rgba(103,223,255,.12));backdrop-filter:blur(20px);border:1px solid rgba(0,157,255,.25);border-radius:28px;padding:56px 40px;box-shadow:0 20px 60px rgba(0,157,255,.12)}
+.cta-card h2{font-family:var(--h);font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;color:var(--dark);margin-bottom:16px}
+.cta-card p{color:var(--muted);font-size:1rem;line-height:1.7;margin-bottom:32px}
+.cta-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.btn-sky{background:linear-gradient(135deg,#009dff,#67dfff);color:#fff;padding:15px 32px;border-radius:50px;font-weight:700;font-size:.95rem;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:all .3s;box-shadow:0 10px 28px rgba(0,157,255,.3)}
+.btn-sky:hover{transform:translateY(-4px);box-shadow:0 20px 45px rgba(0,157,255,.45)}
+.btn-outline{background:rgba(255,255,255,.6);color:var(--sky);padding:15px 32px;border-radius:50px;font-weight:700;font-size:.95rem;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:all .3s;border:2px solid rgba(0,157,255,.3)}
+.btn-outline:hover{background:rgba(0,157,255,.1);transform:translateY(-4px)}
+/* FOOTER */
+.footer{padding:30px 20px;position:relative;z-index:10}
+.foot-inner{max-width:1150px;margin:0 auto;background:rgba(255,255,255,.55);backdrop-filter:blur(30px);border:1px solid var(--glass-b);border-radius:40px;padding:36px 50px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 20px 60px rgba(0,0,0,.07)}
+.foot-logo{font-family:var(--h);font-size:1.5rem;font-weight:900;color:var(--dark)}
+.foot-logo em{font-style:normal;color:var(--sky)}
+.foot-links{display:flex;gap:20px;list-style:none}
+.foot-links a{text-decoration:none;color:var(--muted);font-size:.88rem;transition:color .3s}
+.foot-links a:hover{color:var(--sky)}
+.foot-btm{max-width:1150px;margin:12px auto 0;text-align:center;color:#94a3b8;font-size:.8rem;padding:12px 0;border-top:1px solid rgba(0,157,255,.1)}
+.fl-wa{position:fixed;bottom:28px;right:28px;z-index:500;width:58px;height:58px;border-radius:50%;background:linear-gradient(135deg,#25D366,#128C7E);display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 10px 28px rgba(37,211,102,.4);animation:waP 3s ease infinite;transition:transform .3s}
+.fl-wa:hover{transform:scale(1.15)}
+@keyframes waP{0%,100%{box-shadow:0 10px 28px rgba(37,211,102,.4)}50%{box-shadow:0 14px 38px rgba(37,211,102,.7),0 0 0 10px rgba(37,211,102,.12)}}
+.btn-top{position:fixed;bottom:100px;right:28px;z-index:500;width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,#009dff,#67dfff);display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.15rem;cursor:pointer;box-shadow:0 8px 20px rgba(0,157,255,.35);opacity:0;transform:translateY(20px);transition:all .4s;border:none;font-family:var(--b)}
+.btn-top.vis{opacity:1;transform:translateY(0)}.btn-top:hover{transform:translateY(-5px)}
+@media(max-width:1024px){.stats-grid{grid-template-columns:repeat(2,1fr)}.values-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:768px){.navbar{display:none}.mobile-nav{display:block}.story-grid{grid-template-columns:1fr}.story-img img{height:280px}.badge-fl{display:none}.tl::before{left:26px}.tl-it{flex-direction:row !important}.tl-it:nth-child(even) .tl-c{text-align:left}.values-grid{grid-template-columns:1fr}.foot-inner{flex-direction:column;gap:20px;text-align:center;padding:28px 24px;border-radius:24px}.foot-links{flex-wrap:wrap;justify-content:center}.fl-wa{bottom:82px;right:14px}.btn-top{bottom:148px;right:14px}section{padding:70px 20px}}
+</style>
+</head>
+<body>
+<div class="cursor" id="cur"></div>
+<div class="cursor-ring" id="cur-ring"></div>
+<div class="scroll-bar" id="sprog"></div>
+
+<nav class="navbar" id="nav">
+  <a href="index.html" class="nav-logo">🎈 Shree <em>Balloons</em></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html#services">Services</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="reviews.html">Reviews</a></li>
+    <li><a href="about.html" class="active">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="https://wa.me/919876543210?text=Hi! I want to book a decoration." class="nav-cta" target="_blank">Book Now ✨</a></li>
+  </ul>
+</nav>
+<nav class="mobile-nav">
+  <ul>
+    <li><a href="index.html"><span class="ico">🏠</span>Home</a></li>
+    <li><a href="index.html#services"><span class="ico">🎀</span>Services</a></li>
+    <li><a href="gallery.html"><span class="ico">🖼️</span>Gallery</a></li>
+    <li><a href="reviews.html"><span class="ico">⭐</span>Reviews</a></li>
+    <li><a href="contact.html"><span class="ico">📞</span>Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-hero" data-aos="fade-up">
+  <div class="s-tag">🌟 Our Story</div>
+  <h1>Turning Dreams Into Realities</h1>
+  <p>From a small dream to Delhi NCR's most trusted balloon decoration brand — here's our journey.</p>
+</div>
+
+<section>
+  <div class="ctn">
+    <div class="story-grid">
+      <div data-aos="fade-right">
+        <div class="story-img">
+          <img src="img/c1.jpeg" alt="About Shree Balloons">
+          <div class="badge-fl"><span class="num">5+</span>Years of Excellence</div>
+        </div>
+      </div>
+      <div data-aos="fade-left" data-aos-delay="100">
+        <div class="s-tag">🌟 Who We Are</div>
+        <h2 class="s-title">Shree Balloons — Born from Passion</h2>
+        <p class="s-sub" id="ab-s1">Shree Balloons was born from a simple belief — every celebration deserves to be extraordinary. Founded in 2019 in Delhi, we started with birthday decorations and a dream to bring smiles to every doorstep.</p>
+        <br>
+        <p class="s-sub" id="ab-s2">Today, we've decorated 5000+ events across 7+ cities in Delhi NCR, from intimate room surprise decorations to grand wedding stages. Our team of dedicated artists puts love into every setup they create.</p>
+        <div class="stats-grid" style="margin-top:36px">
+          <div class="stat-card"><div class="num" id="ab-st1">5000+</div><p>Events Decorated</p></div>
+          <div class="stat-card"><div class="num" id="ab-st2">500+</div><p>Happy Clients</p></div>
+          <div class="stat-card"><div class="num" id="ab-st3">7+</div><p>Cities Served</p></div>
+          <div class="stat-card"><div class="num" id="ab-st4">4.9★</div><p>Google Rating</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="tl-sec">
+  <div class="ctn">
+    <div class="tl-title" data-aos="fade-up">
+      <div class="s-tag">📅 Our Journey</div>
+      <h2 class="s-title">How We Got Here</h2>
+    </div>
+    <div class="tl" id="tl-con">
+      <div class="tl-it" data-aos="fade-right">
+        <div class="tl-dot">🌱</div>
+        <div class="tl-c"><h3>2019 — Founded</h3><p>Started with birthday decorations in Delhi. Got our first 50 clients in the very first month through word of mouth.</p></div>
+      </div>
+      <div class="tl-it" data-aos="fade-left">
+        <div class="tl-dot">🚀</div>
+        <div class="tl-c"><h3>2020 — Growth Despite Odds</h3><p>Pivoted to outdoor and socially-distanced setups. Expanded our design catalogue and built a loyal customer base.</p></div>
+      </div>
+      <div class="tl-it" data-aos="fade-right">
+        <div class="tl-dot">📈</div>
+        <div class="tl-c"><h3>2021 — Expanded Services</h3><p>Added weddings, ring ceremonies, haldi, mehendi &amp; baby showers. Crossed 1000+ events decorated.</p></div>
+      </div>
+      <div class="tl-it" data-aos="fade-left">
+        <div class="tl-dot">🌟</div>
+        <div class="tl-c"><h3>2022 — Multi-City Expansion</h3><p>Expanded services to Noida, Gurgaon, Faridabad, Ghaziabad and more. Built a dedicated team of 15+ artists.</p></div>
+      </div>
+      <div class="tl-it" data-aos="fade-right">
+        <div class="tl-dot">🏆</div>
+        <div class="tl-c"><h3>2024 — 5000+ Events</h3><p>Became Delhi NCR's most-reviewed balloon decoration brand on Google with a 4.9★ average rating.</p></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="ctn">
+    <div class="text-center" style="text-align:center;margin-bottom:0" data-aos="fade-up">
+      <div class="s-tag">💡 Our Values</div>
+      <h2 class="s-title">Why We Do What We Do</h2>
+    </div>
+    <div class="values-grid" id="val-con">
+      <div class="val-card" data-aos="fade-up"><span class="val-ico">❤️</span><h3>Made with Love</h3><p>Every decoration is crafted with genuine care. We treat every client's event as if it were our own celebration.</p></div>
+      <div class="val-card" data-aos="fade-up" data-aos-delay="100"><span class="val-ico">✨</span><h3>Attention to Detail</h3><p>From the placement of every balloon to the height of every arch — we believe perfection is in the details.</p></div>
+      <div class="val-card" data-aos="fade-up" data-aos-delay="200"><span class="val-ico">⏱️</span><h3>Always On Time</h3><p>We understand the importance of timing in events. We arrive early, set up on schedule and leave no stress for you.</p></div>
+      <div class="val-card" data-aos="fade-up"><span class="val-ico">💰</span><h3>Honest Pricing</h3><p>No hidden charges. What we quote is what you pay. Premium quality decoration at fair, transparent prices.</p></div>
+      <div class="val-card" data-aos="fade-up" data-aos-delay="100"><span class="val-ico">🎨</span><h3>Creative Vision</h3><p>We bring fresh, creative ideas to every event. No two setups from us look the same — every one is unique.</p></div>
+      <div class="val-card" data-aos="fade-up" data-aos-delay="200"><span class="val-ico">📞</span><h3>5-Min Response</h3><p>We respond to WhatsApp within 5 minutes. Your questions, changes and concerns are always our priority.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-sec">
+  <div class="cta-card" data-aos="zoom-in">
+    <h2>Let's Create Something Beautiful Together</h2>
+    <p>Whether it's a small intimate surprise or a grand wedding stage — we're ready to make it magical.</p>
+    <div class="cta-btns">
+      <a href="https://wa.me/919876543210?text=Hi! I want to book a decoration with Shree Balloons." target="_blank" class="btn-sky">💬 Book on WhatsApp</a>
+      <a href="gallery.html" class="btn-outline">🖼️ View Gallery</a>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="foot-inner">
+    <div class="foot-logo">🎈 Shree <em>Balloons</em></div>
+    <ul class="foot-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="reviews.html">Reviews</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+  <div class="foot-btm">© 2026 Shree Balloons. All Rights Reserved. | Balloon Decoration Delhi NCR</div>
+</footer>
+
+<a href="https://wa.me/919876543210?text=Hi! I want to book a decoration." class="fl-wa" target="_blank">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="28" height="28"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+</a>
+<button class="btn-top" id="btt">↑</button>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import { getFirestore, doc, getDoc, collection, getDocs } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDPz8rchqOD7mHbrLtnuU5m9uAMEJgf59U",
+  authDomain: "decor-25587.firebaseapp.com",
+  projectId: "decor-25587",
+  storageBucket: "decor-25587.firebasestorage.app",
+  messagingSenderId: "857089585477",
+  appId: "1:857089585477:web:14348a7e77b6b4931f8e2c"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+async function loadData() {
+  try {
+    const snap = await getDoc(doc(db, "config", "about"));
+    if(snap.exists()){
+      const d = snap.data();
+      if(d.s1) document.getElementById('ab-s1').textContent = d.s1;
+      if(d.s2) document.getElementById('ab-s2').textContent = d.s2;
+    }
+  } catch(e) { console.error(e); }
+
+  try {
+    const snap = await getDoc(doc(db, "config", "stats"));
+    if(snap.exists()){
+      const d = snap.data();
+      if(d.s1) document.getElementById('ab-st1').textContent = d.s1 + "+";
+      if(d.s2) document.getElementById('ab-st2').textContent = d.s2 + "+";
+      if(d.s3) document.getElementById('ab-st3').textContent = d.s3 + "+";
+      if(d.s4) document.getElementById('ab-st4').textContent = d.s4 + "★";
+    }
+  } catch(e) { console.error(e); }
+
+  try {
+    const snap = await getDocs(collection(db, "timeline"));
+    let arr = []; snap.forEach(d => arr.push(d.data()));
+    if(arr.length>0){
+      arr.sort((a,b)=>a.year - b.year);
+      document.getElementById('tl-con').innerHTML = arr.map((t,i) => `
+        <div class="tl-it" data-aos="${i%2==0?'fade-right':'fade-left'}">
+          <div class="tl-dot">✨</div>
+          <div class="tl-c"><h3>${t.year} — ${t.title}</h3><p>${t.desc}</p></div>
+        </div>`).join('');
+    }
+  } catch(e) { console.error(e); }
+
+  try {
+    const snap = await getDocs(collection(db, "values"));
+    let arr = []; snap.forEach(d => arr.push(d.data()));
+    if(arr.length>0){
+      document.getElementById('val-con').innerHTML = arr.map((v,i) => `
+        <div class="val-card" data-aos="fade-up" data-aos-delay="${(i%3)*100}">
+          <span class="val-ico">${v.icon||'✨'}</span>
+          <h3>${v.title}</h3>
+          <p>${v.desc}</p>
+        </div>`).join('');
+    }
+  } catch(e) { console.error(e); }
+}
+loadData();
+
+AOS.init({duration:800,easing:'ease-out-cubic',once:true,offset:50});
+const cur=document.getElementById('cur'),curR=document.getElementById('cur-ring');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px'},{passive:true});
+function ac(){rx+=(mx-rx)*.14;ry+=(my-ry)*.14;curR.style.left=rx+'px';curR.style.top=ry+'px';requestAnimationFrame(ac)}ac();
+const nav=document.getElementById('nav'),sp=document.getElementById('sprog'),btt=document.getElementById('btt');
+window.addEventListener('scroll',()=>{const p=(window.scrollY/(document.body.scrollHeight-window.innerHeight))*100;sp.style.width=p+'%';nav.classList.toggle('sc',window.scrollY>80);btt.classList.toggle('vis',window.scrollY>300)},{passive:true});
+btt.onclick=()=>window.scrollTo({top:0,behavior:'smooth'});
+</script>
+</body>
+</html>
