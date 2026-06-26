@@ -82,7 +82,7 @@ a:hover~.cursor,button:hover~.cursor{transform:translate(-50%,-50%) scale(2.5)}
 =========================== */
 .navbar{
   position:fixed;top:18px;left:50%;transform:translateX(-50%);
-  width:min(96%,1150px);
+  width:calc(100% - 24px);max-width:1150px;
   display:flex;justify-content:space-between;align-items:center;
   padding:8px 32px;
   background:rgba(255,255,255,0.2);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
@@ -105,6 +105,7 @@ a:hover~.cursor,button:hover~.cursor{transform:translate(-50%,-50%) scale(2.5)}
 /* Mobile Nav */
 .mobile-nav{
   display:none;position:fixed;bottom:16px;left:50%;transform:translateX(-50%);
+  width:calc(100% - 24px);max-width:420px;
   background:rgba(255,255,255,.72);backdrop-filter:blur(30px);-webkit-backdrop-filter:blur(30px);
   border:1px solid rgba(255,255,255,.6);border-radius:80px;padding:12px 28px;
   z-index:1000;box-shadow:0 20px 50px rgba(0,0,0,.15), inset 0 2px 2px rgba(255,255,255,0.8), inset 0 -1px 2px rgba(0,0,0,.05)
@@ -423,6 +424,29 @@ section{padding:100px 20px;position:relative;z-index:10}
 .ripple{position:relative;overflow:hidden}
 .ripple::after{content:'';position:absolute;border-radius:50%;transform:scale(0);animation:rippleA .6s linear;background:rgba(255,255,255,.35)}
 @keyframes rippleA{to{transform:scale(4);opacity:0}}
+
+html,
+body{
+    width:100%;
+    max-width:100%;
+    overflow-x:hidden;
+}
+
+body{
+    display:block;
+}
+
+section,
+.hero,
+.ctn{
+    width:100%;
+    max-width:100%;
+}
+
+img{
+    max-width:100%;
+    height:auto;
+}
 </style>
 </head>
 <body>
@@ -903,8 +927,8 @@ if(db){
             boxShadow: "0 20px 40px rgba(0,0,0,0.2)"
           });
           if (i > 0) {
-            const startX = (i % 2 === 1) ? window.innerWidth : -window.innerWidth;
-            gsap.set(card, { x: startX, rotation: (i % 2 === 1 ? 25 : -25) });
+            const startX = (i % 2 === 1) ? window.innerWidth * 1.5 : -window.innerWidth * 1.5;
+            gsap.set(card, { x: startX, rotation: (i % 2 === 1 ? 25 : -25), autoAlpha: 0 });
           }
         });
         
@@ -923,6 +947,7 @@ if(db){
           tl.to(card, {
             x: 0,
             rotation: (Math.random() - 0.5) * 8,
+            autoAlpha: 1,
             duration: 1,
             ease: "power2.out"
           });
@@ -962,8 +987,8 @@ if(db){
             transformOrigin: "center center"
           });
           if (i > 0) {
-            const startX = (i % 2 === 1) ? window.innerWidth : -window.innerWidth;
-            gsap.set(card, { x: startX, rotation: (i % 2 === 1 ? 25 : -25) });
+            const startX = (i % 2 === 1) ? window.innerWidth * 1.5 : -window.innerWidth * 1.5;
+            gsap.set(card, { x: startX, rotation: (i % 2 === 1 ? 25 : -25), autoAlpha: 0 });
           }
         });
         const tl = gsap.timeline({
@@ -971,7 +996,7 @@ if(db){
         });
         cards.forEach((card, i) => {
           if(i === 0) return;
-          tl.to(card, { x: 0, rotation: (Math.random() - 0.5) * 8, duration: 1, ease: "power2.out" });
+          tl.to(card, { x: 0, rotation: (Math.random() - 0.5) * 8, autoAlpha: 1, duration: 1, ease: "power2.out" });
         });
         tl.to({}, { duration: 1.5 });
       }
